@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Max Action</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+             <link href="newcss.css" rel="stylesheet" type="text/css"/>
+       <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+         <script src="newjavascript.js" type="text/javascript"></script>
+</head>
+<body>
+        <div data-role="page">
+                <div id="storage">no storage</div>
+        <div id="scores">
+</div>
+                <select name="display" id="display">
+         <option id ="d1" value="1"> Front scores</option>
+            <option id ="d2" value="2">Back scores</option>
+            <option id ="d3" value="3">Front quarters </option>
+            <option id ="d4" value="4">Back quarters</option>
+            <option id ="d3" value="5">Front Matches </option>
+            <option id ="d4" value="6">Back Matches</option>
+
+    </select>
+            <a href="#inpscore" data-rel="popup" class="ui-btn ui-btn-inline">Score</a>
+             <a href="#Window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Setup</a> 
+             <a href="#positionWindow" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Greenies</a>
+             <button id="show_results"  value="Result" data-inline="true">Results</button>
+             <button id="show_specials"  value="Result" data-inline="true">Specials</button>
+              <button id="New_Round"  value="new" data-inline="true">New Round</button>
+                     
+        <div data-role="popup" id="inpscore">
+        <div data-inline="true" id="player">  </div><div data-inline="true" id="Hole">Hole 1</div> <div data-inline="true" id="pscore">Score 0</div>
+               <h3>Enter Score</h3>
+        <button id="scrore1" class="scorebtn"  value="1 " data-inline="true">1</button>      
+        <button id="scrore2" class="scorebtn"  value="2 " data-inline="true">2</button> 
+        <button id="scrore3" class="scorebtn"  value="3 " data-inline="true">3</button> 
+        <button id="scrore4" class="scorebtn"  value="4 " data-inline="true">4</button> <br/>
+        <button id="scrore5" class="scorebtn"  value="5 " data-inline="true">5</button> 
+        <button id="scrore6" class="scorebtn"  value="6 " data-inline="true">6</button> 
+        <button id="scrore7" class="scorebtn"  value="7 " data-inline="true">7</button> 
+        <button id="scrore8" class="scorebtn"  value="8 " data-inline="true">8</button> <br/>
+        <button id="scrore9" class="scorebtn"  value="9 " data-inline="true">9</button> 
+        <button id="scrore10" class="scorebtn"  value="10" data-inline="true">10</button> 
+        <button id="scrore11" class="scorebtn"  value="11" data-inline="true">11</button> 
+        <button id="scrore12" class="scorebtn"  value="12" data-inline="true">12</button> <br/>
+        <button id="scrlbck"   value="13" data-inline="true">bk</button> 
+        <button id="scrlfwd"   value="14" data-inline="true">nx</button> 
+        <button id="addhole"  value="hole +" data-inline="true">hole +</button> 
+        <button id="subhole"  value="hole -" data-inline="true">hole -</button>   
+<br/>
+       
+
+    </div>
+    <div data-role="popup" id="Results">
+        <h3 id="show_results">Results</h3>
+        <div id="rpl1"></div>
+        <div id="rpl2"></div>
+        <div id="rpl3"></div>
+        <div id="rpl4"></div>
+        <div id="rpl5"></div>
+        <div id="m1"></div>
+        <div id="m2"></div>
+        <div id="m3"></div>
+        <div id="grns"></div>
+    </div>
+               <div data-role="popup" id="Specials">
+                   <h3>Specials</h3>
+      <select name="ind_scor" id="escor">
+         <option id ="sp1" value="0"> 1</option>
+         <option id ="sp2" value="1"> 2</option>
+            <option id ="sp3" value="2"> 3</option>
+            <option id ="sp4" value="3" selected> 4</option>
+            <option id ="sp5" value="4"> 5</option>
+    </select>      
+        <div id="SpTotal">10 sp Wins $60.00 </div>           
+        <div id="birdies">Bridies =</div>
+        <div id="skins">Skins =</div>
+        <div id="ButteBall">Butte ball= </div>
+        <div id="Bunnies">Bunnies = </div>
+        <div id="noDubs">No Dubs </div>
+        <div id="noHoag">No Hoagies </div>
+        <div id="Do">Do </div>
+        <div id="meddy">Medal </div>
+     
+    </div>
+     <div data-role="popup" id="enter_score">
+        <h3>Score</h3>
+         <select name="ind_score" id="escore">
+         <option id ="s1" value="1"> 1</option>
+         <option id ="s2" value="2"> 2</option>
+            <option id ="s3" value="3"> 3</option>
+            <option id ="s4" value="4" selected> 4</option>
+            <option id ="s5" value="5"> 5</option>
+            <option id="s6" value ="6" >6</option>
+    </select>
+                
+    </div>          
+<div data-role="popup" id="positionWindow">
+                
+                    <label>Hole</label>
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input type="radio" name="gr" id="h6" checked="checked">
+                    <label for="h6">Hole 6</label>
+                    <input type="radio" name="gr" id="h14" >
+                    <label for="h14">Hole 14</label>
+                    <input type="radio" name="gr" id="h17" >
+                    <label for="h17">Hole 17</label>
+                    </fieldset>
+                   <label for="select-greenie" id="ff">Select closest to</label>
+    <select name="select-greenie" id="select-greenie">
+         <option id ="p1" value="1"> P1</option>
+            <option id ="p2" value="2">P2 </option>
+            <option id ="p3" value="3">P3 </option>
+            <option id ="p4" value="4">P4 </option>
+            <option id ="p5" value="5"> P5</option>
+            <option id="p6" value ="6" selected>No greenie</option>
+    </select>
+</div> 
+             <div data-role="popup" id="Window">
+             <h3>Setup</h3>      
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+        <select name="select-player1" id="splayer1">
+            <option>Player 1</option>
+            <option value="Bill Joyce">Bill Joyce</option>
+            <option value="Ryan Murphy">Ryan Murphy</option>
+            <option value="Mark Murphy">Mark Murphy</option>
+            <option value="Zack Murphy">Zack Murphy</option>
+            <option value="Andy Burton">Andy Burton</option>
+            <option value="Mark Moodry">Mark Moodry</option>
+            <option value="Ron Hasquet">Ron Hasquet</option>
+            <option value="Dan Mulholland">Dan Mulholland</option>
+            <option value="Joe Burton">Joe Burton</option>
+            <option value="Steve Salo">Steve Salo</option>
+            <option value="Keith Johnston">Keith Johnston</option>
+            <option value="Jim Anderson">Jim Anderson</option>
+            <option value="Kyle Olsen">Kyle Olsen</option>
+            <option value="Fred Zemlack">Fred Zemlack</option>
+            <option value="Other">Other</option>
+
+            <!-- etc. -->
+        </select>
+    
+        <select name="select-player2" id="splayer2">
+            <option>Player 2</option>
+            <option value="Bill Joyce">Bill Joyce</option>
+            <option value="Ryan Murphy">Ryan Murphy</option>
+            <option value="Mark Murphy">Mark Murphy</option>
+            <option value="Zack Murphy">Zack Murphy</option>
+            <option value="Andy Burton">Andy Burton</option>
+            <option value="Mark Moodry">Mark Moodry</option>
+            <option value="Ron Hasquet">Ron Hasquet</option>
+            <option value="Dan Mulholland">Dan Mulholland</option>
+            <option value="Joe Burton">Joe Burton</option>
+            <option value="Steve Salo">Steve Salo</option>
+            <option value="Keith Johnston">Keith Johnston</option>
+            <option value="Jim Anderson">Jim Anderson</option>
+            <option value="Kyle Olsen">Kyle Olsen</option>
+            <option value="Fred Zemlack">Fred Zemlack</option>
+            <option value="Other">Other</option>
+            <!-- etc. -->
+        </select>
+    
+        <select name="select-player3" id="splayer3">
+            <option>Player 3</option>
+            <option value="Bill Joyce">Bill Joyce</option>
+            <option value="Ryan Murphy">Ryan Murphy</option>
+            <option value="Mark Murphy">Mark Murphy</option>
+            <option value="Zack Murphy">Zack Murphy</option>
+            <option value="Andy Burton">Andy Burton</option>
+            <option value="Mark Moodry">Mark Moodry</option>
+            <option value="Ron Hasquet">Ron Hasquet</option>
+            <option value="Dan Mulholland">Dan Mulholland</option>
+            <option value="Joe Burton">Joe Burton</option>
+            <option value="Steve Salo">Steve Salo</option>
+            <option value="Keith Johnston">Keith Johnston</option>
+            <option value="Jim Anderson">Jim Anderson</option>
+            <option value="Kyle Olsen">Kyle Olsen</option>
+            <option value="Fred Zemlack">Fred Zemlack</option>
+            <option value="Other">Other</option>
+            <!-- etc. -->
+        </select>
+        <select name="select-player4" id="splayer4">
+            <option>Player 4</option>
+            <option value="Bill Joyce">Bill Joyce</option>
+            <option value="Ryan Murphy">Ryan Murphy</option>
+            <option value="Mark Murphy">Mark Murphy</option>
+            <option value="Zack Murphy">Zack Murphy</option>
+            <option value="Andy Burton">Andy Burton</option>
+            <option value="Mark Moodry">Mark Moodry</option>
+            <option value="Ron Hasquet">Ron Hasquet</option>
+            <option value="Dan Mulholland">Dan Mulholland</option>
+            <option value="Joe Burton">Joe Burton</option>
+            <option value="Steve Salo">Steve Salo</option>
+            <option value="Keith Johnston">Keith Johnston</option>
+            <option value="Jim Anderson">Jim Anderson</option>
+            <option value="Kyle Olsen">Kyle Olsen</option>
+            <option value="Fred Zemlack">Fred Zemlack</option>
+            <option value="Other">Other</option>
+            <!-- etc. -->
+        </select>
+        <select name="select-player5" id="splayer5">
+            <option>Player 5</option>
+            <option value="Bill Joyce">Bill Joyce</option>
+            <option value="Ryan Murphy">Ryan Murphy</option>
+            <option value="Mark Murphy">Mark Murphy</option>
+            <option value="Zack Murphy">Zack Murphy</option>
+            <option value="Andy Burton">Andy Burton</option>
+            <option value="Mark Moodry">Mark Moodry</option>
+            <option value="Ron Hasquet">Ron Hasquet</option>
+            <option value="Dan Mulholland">Dan Mulholland</option>
+            <option value="Joe Burton">Joe Burton</option>
+            <option value="Steve Salo">Steve Salo</option>
+            <option value="Keith Johnston">Keith Johnston</option>
+            <option value="Jim Anderson">Jim Anderson</option>
+            <option value="Kyle Olsen">Kyle Olsen</option>
+            <option value="Fred Zemlack">Fred Zemlack</option>
+            <option value="Other">Other</option>
+            <!-- etc. -->
+        </select>
+    </fieldset>
+        </div>
+        </div>
+        </div>
+      </body>
+</html>

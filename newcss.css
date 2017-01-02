@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 1, 2017, 8:36:29 PM
+    Author     : jjoyc
+*/
+root { 
+    display: block;
+}
+    div.divclass {
+    display: inline; 
+}
+.scorebtn {
+    text-overflow: initial; /* Get rid of the ellipsis */
+    padding-left: 5px; /* Play with padding to make max use of available button width */
+    font-size: 15px; /* Play with font size of the text */
+     width: 100px;
+     height: 30px;
+
+}
+table {
+    border: 1px;
+    border-color: #3373a5;
+    table-layout: auto;   
+}
+thead {
+    background-color:  #6facd5;
+    border-style:double
+}
+td {
+    border:black solid;
+    font-size: 15px;
+    height: 35px;
+    width: 35px;
+} 
+.ui-btn-inner{
+    text-overflow: initial; /* Get rid of the ellipsis */
+    padding-left: 5px; /* Play with padding to make max use of available button width */
+}
+.ui-btn-text {
+    font-size: 15px; /* Play with font size of the text */
+}
+.redBg {
+    background: red;
+}
+.greenBg {
+    background: green;
+}
+.skinBorder {
+    border-color: red;
+}
+
